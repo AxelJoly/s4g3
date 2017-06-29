@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Equations différentielles non linéarisées}
+
+\date{29 Mai 2017}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section{Equation de la sphère (Linéarisé mais non vérifiées)}
+\subsection{En x:}
+\begin{equation}
+    \frac{dv}{dt} = \frac{m_s g}{m_s + \frac{J_s}{R_s^2}} \cdot cos(\theta_e) \Delta \theta
+\end{equation}
+
+\begin{equation}
+    \frac{dx}{dt} = v
+\end{equation}
+
+\subsection{En y:}
+\begin{equation}
+    \frac{dv}{dt} = \frac{m_s g}{m_s + \frac{J_s}{R_s^2}} \cdot cos(\phi_e) \Delta \phi
+\end{equation}
+
+\begin{equation}
+    \frac{dy}{dt} = v
+\end{equation}
+
+\section{Equation de la plaque}
+
+
+\subsection{En \phi:}
+\begin{equation}
+    \frac{d\dot \phi}{dt} = \frac{1}{5} (F_A y_A + F_B y_B + F_C y_C + m_s g y_s)
+\end{equation}
+\begin{equation}
+   \dot \phi  = \frac{d \phi}{dt}
+\end{equation}
+
+\subsection{En \theta:}
+\begin{equation}
+    \frac{d\dot \theta}{dt} = -\frac{1}{5} (F_A y_A + F_B y_B + F_C y_C + m_s g x_s)
+\end{equation}
+\begin{equation}
+   \dot \theta  = \frac{d \theta}{dt}
+\end{equation}
+
+\subsection{En z:}
+\begin{equation}
+    \frac{d\dot z}{dt} = g + \frac{1}{m_p + m_s}(F_A + F_B + F_C)
+\end{equation}
+\begin{equation}
+   \dot z  = \frac{dz}{dt}
+\end{equation}
+
+\section{Equation des actionneurs}
+\subsection{version générale (k = A = B = C)}
+
+\begin{equation}
+   F_k =   \frac{G_k \cdot i_k^2 \cdot sgn(i_k)}{(d_k - d_{rk})^2} + \frac{H_k}{(d_k - d_{rk})^2}
+\end{equation}
+Avec
+\begin{equation}
+    i_k =   \frac{V_k}{R}(1-e^{\frac{R}{L}t})
+\end{equation}
+\end{document}
